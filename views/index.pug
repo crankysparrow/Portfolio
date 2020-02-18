@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='/css/style.css')
+    script(src='/js/bundle.js')
+
+  body
+    include header.pug
+
+    div.lorem
+      h2 Some Lorem Ipsum and Stuff asd
+      each para in paragraphs
+        p=para
+
+      include text-generate
+      +text-gen(7, "sentences")
+
+    include includes/about.pug
+    
+    include includes/projects.pug
+
+    include includes/contact.pug
+
+
+    block footer

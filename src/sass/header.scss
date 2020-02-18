@@ -1,0 +1,168 @@
+$magic_bar_color: rgb(204, 208, 212);
+$menu_hover_color: rgba(204, 208, 212, 0.8);
+
+.header {
+  height: 100vh;
+  // padding: 0 1rem;
+  text-transform: uppercase;
+  h1 {
+    font-size: 5rem;
+    margin: 0 1rem;
+
+  }
+  ul {
+    font-size: 5rem;
+    line-height: 5rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      a {
+        display: block;
+        padding-left: 1rem;
+        width: 100%;
+        background: linear-gradient(to bottom, $menu_hover_color 0%, $menu_hover_color 100%);
+        background-position: 0 100%;
+        background-repeat: repeat-y;
+        background-size: 0px 4px;
+        transition: background-size .2s;
+        &:hover {
+          background-size: 100% 4px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.header .menu {
+  position: fixed;
+  width: 100%;
+  ul.menu-list {
+    position: relative;
+    transform: none;
+    transition: all 500ms;
+    &.scrolled {
+      background-color: rgba(0, 139, 139, 0.5);
+    }
+    .magic-button {
+      width: 80px;
+      // height: 100%;
+      min-height: 80px;
+      position: absolute;
+      top: 0;
+      left: -80px;
+      transform-origin: top right;      
+      &:after, &:before {
+        content: '';
+        position: absolute;
+        background-color: $magic_bar_color;
+        height: 50%;
+        width: 4px;
+        transform: none;
+        transition: all 500ms;
+      }
+      &:after {
+        transform-origin: bottom right;
+        top: 0;
+        right: 0;
+      }
+      &:before {
+        transform-origin: top right;
+        bottom: 0;
+        right: 0;
+      }
+    }
+    li {
+      max-height: 200px;
+      overflow: hidden;
+    }
+    .magic-button.arrow {
+      animation: makeArrow .7s ease-in-out;      
+      animation-fill-mode: forwards;
+      cursor: pointer;
+      &:before {
+        animation: arrowBefore .7s ease .5s;
+        animation-fill-mode: forwards;
+      }
+      &:after {
+        animation: arrowAfter .7s ease .5s;
+        animation-fill-mode: forwards;
+      }          
+    }
+    .magic-button.unarrow {
+      animation: unMakeArrow 1s ease-in-out .4s;
+      animation-fill-mode: both;
+      &:before {
+        animation: unBefore .5s ease 0s;
+        animation-fill-mode: both;
+      }
+      &:after {
+        animation: unAfter .5s ease 0s;
+        animation-fill-mode: both;
+      }
+    }
+  }
+}
+
+@keyframes arrowBefore {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes arrowAfter {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes makeArrow {
+  from {
+    transform: rotate(0);
+    top: 0;
+  }
+  to {
+    top: -20px;
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes unMakeArrow {
+  from {
+    top: -20px;
+    transform: rotate(90deg);
+  }
+  75% {
+    top: 0;
+    transform: rotate(0);
+    height: 80px;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes unBefore {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes unAfter {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}

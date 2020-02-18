@@ -1,0 +1,63 @@
+@import 'normalize.scss';
+
+$color_link: #ec9b3b;
+$color_header: #f7be16;
+// $color_bg_page:#00818a;
+$color_bg_page: #011627;
+$color_bg_section: #293462;
+
+@import 'typography.scss';
+@import 'header.scss';
+
+body {
+  font-family: "Roboto";
+  background: $color_bg_page;
+}
+
+.section {
+  height: 100vh;
+  background: $color_bg_section;
+  margin: 0 6rem;
+}
+
+.header {
+  background: 
+                linear-gradient(225deg, #2F404E87 0 18%, transparent 18% ),
+                // linear-gradient(135deg, #2F404E 0 18%, transparent 18%),
+                // linear-gradient(45deg, #2F404E 0 18%, transparent 18%),
+                // linear-gradient(315deg, #2F404E 0 18%, transparent 18%),
+                ;
+                // linear-gradient(303.5deg, #2F404E  0 25%, transparent 25%);
+                // linear-gradient(135deg, #2F404E 0 30%, transparent 30% );
+// linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
+// linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
+// linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
+// linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+  background-size: 30px 30px;
+  background-repeat: repeat;
+}
+
+.projects {
+  margin: 0 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .project-single {
+    display: flex;
+		flex-direction: column;
+    margin: 3rem 0;
+    flex: 0 0 20%;
+    box-shadow: -2px 2px 9px 0px rgba(0,0,0,0.34);
+    img {
+      width: 100%;
+      height: auto;
+    }
+		.image {
+			max-width: 100%;
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+    }
+  }
+}

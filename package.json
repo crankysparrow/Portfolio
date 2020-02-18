@@ -1,0 +1,28 @@
+{
+  "name": "portfolio-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "browser-sync": "^2.26.7",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "gulp-nodemon": "^2.4.2",
+    "jquery": "^3.4.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.0.2",
+    "nodemon": "^2.0.2",
+    "webpack-stream": "^5.2.1"
+  }
+}
