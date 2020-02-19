@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import './projects.js';
 
 console.log('bundle js loaded');
 

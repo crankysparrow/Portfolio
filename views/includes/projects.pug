@@ -1,12 +1,26 @@
 div#projects.section.projects
   h1 Projects
   div.inner
-    each project in projects 
-      div.project-single
-        h3 #{project.title}
-        p #{project.tech}
-        //- img(src=project.image)
-    each project in projects 
-      div.project-single
-        h3 #{project.title}
-        p #{project.tech}        
+    div.list
+      each project in projects 
+        div.project-single.is-collapsed
+          div.project-inner
+            h2 #{project.title}
+          div.project-expander
+            p #{project.tech}
+      div.project-single.is-expanded
+        div.project-inner
+          h2 Test
+        div.project-expander
+          p A bunch of stuff              
+      each project in projects 
+        div.project-single.is-collapsed
+          div.project-inner
+            h2 #{project.title}
+          div.project-expander
+            p #{project.tech}                      
+          //- img(src=project.image)
+      //- each project in projects 
+      //-   div.project-single
+      //-     h3 #{project.title}
+      //-     p #{project.tech}          

@@ -23,9 +23,9 @@ body {
 
 .section {
   min-height: 100vh;
-  margin: 0rem 6rem;
+  margin: 0rem 6vw;
   &:not(.header) {
-    margin: 3rem 6rem;
+    margin: 3rem 6vw;
     padding-top: 6rem;
     text-align: right;
     display: flex;
