@@ -9,13 +9,13 @@ html(lang="en")
   body
     include header.pug
 
-    div.lorem
-      h2 Some Lorem Ipsum and Stuff asd
-      each para in paragraphs
-        p=para
+    //- div.lorem
+    //-   h2 Some Lorem Ipsum and Stuff asd
+    //-   each para in paragraphs
+    //-     p=para
 
-      include text-generate
-      +text-gen(7, "sentences")
+    //-   include text-generate
+    //-   +text-gen(7, "sentences")
 
     include includes/about.pug
     

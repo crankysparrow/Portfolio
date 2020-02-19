@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto|Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400|Space+Mono&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -318,7 +318,8 @@ html {
 
 body {
   color: white;
-  font-family: "Roboto"; }
+  font-family: "Roboto";
+  font-weight: 300; }
 
 a {
   color: #ec9b3b;
@@ -393,7 +394,8 @@ h1, h2, h3, h4, h5 {
     .header .menu ul.menu-list .magic-button.arrow {
       animation: makeArrow .7s ease-in-out;
       animation-fill-mode: forwards;
-      cursor: pointer; }
+      cursor: pointer;
+      height: unset !important; }
       .header .menu ul.menu-list .magic-button.arrow:before {
         animation: arrowBefore .7s ease .5s;
         animation-fill-mode: forwards; }
@@ -401,6 +403,7 @@ h1, h2, h3, h4, h5 {
         animation: arrowAfter .7s ease .5s;
         animation-fill-mode: forwards; }
     .header .menu ul.menu-list .magic-button.unarrow {
+      height: unset !important;
       animation: unMakeArrow 1s ease-in-out .4s;
       animation-fill-mode: both; }
       .header .menu ul.menu-list .magic-button.unarrow:before {
@@ -453,31 +456,64 @@ h1, h2, h3, h4, h5 {
   to {
     transform: rotate(0); } }
 
-body {
-  font-family: "Roboto";
-  background: #011627; }
-
-.section {
-  height: 100vh;
-  background: #293462;
-  margin: 0 6rem; }
-
-.header {
-  background: linear-gradient(225deg, #2F404E87 0 18%, transparent 18%);
-  background-size: 30px 30px;
-  background-repeat: repeat; }
-
-.projects {
-  margin: 0 10%;
+#about {
+  padding-top: 6rem;
+  text-align: right;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
-  .projects .project-single {
+  flex-direction: column; }
+  #about .about-inner {
+    background: #273540;
+    flex-grow: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 3rem 0;
-    flex: 0 0 20%;
-    box-shadow: -2px 2px 9px 0px rgba(0, 0, 0, 0.34); }
+    align-items: flex-end; }
+  #about .description {
+    width: 50%;
+    margin: 2rem 5rem;
+    line-height: 1.4rem; }
+  #about .skills {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%; }
+    #about .skills .skill {
+      background: #273540;
+      flex: 0 0 20%;
+      margin: 0 1rem;
+      border: 1px solid #E2711D;
+      border-top-width: 5px;
+      padding: 0 1rem 1rem 1rem; }
+      #about .skills .skill h3 {
+        border-bottom: 2px solid #f7be16;
+        padding-bottom: 1rem; }
+    #about .skills ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: left; }
+      #about .skills ul li {
+        font-size: 1rem;
+        line-height: 1.5rem; }
+
+.projects {
+  margin: 0 10%; }
+  .projects .project-single {
+    display: inline-flex;
+    flex-direction: column;
+    height: 200px;
+    padding: 0 1rem 1rem 1rem;
+    background-color: #41484D;
+    margin: 2%;
+    width: 21%;
+    float: left;
+    border: 1px solid #E2711D;
+    border-top-width: 5px; }
+    .projects .project-single h3 {
+      border-bottom: 2px solid #f7be16;
+      padding-bottom: 1rem;
+      margin-bottom: 0; }
     .projects .project-single img {
       width: 100%;
       height: auto; }
@@ -486,3 +522,28 @@ body {
       .projects .project-single .image img {
         max-width: 100%;
         height: auto; }
+
+body {
+  font-family: "Roboto";
+  font-size: 1rem;
+  background: #011627; }
+  body p {
+    line-height: 1.4rem; }
+
+.section {
+  min-height: 100vh;
+  margin: 0rem 6rem; }
+  .section:not(.header) {
+    margin: 3rem 6rem;
+    padding-top: 6rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column; }
+    .section:not(.header) .inner {
+      background: #273540;
+      flex-grow: 1; }
+
+.header {
+  background: linear-gradient(225deg, #2F404E87 0 18%, transparent 18%);
+  background-size: 30px 30px;
+  background-repeat: repeat; }

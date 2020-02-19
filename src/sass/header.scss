@@ -81,6 +81,7 @@ $menu_hover_color: rgba(204, 208, 212, 0.8);
       animation: makeArrow .7s ease-in-out;      
       animation-fill-mode: forwards;
       cursor: pointer;
+      height: unset !important;
       &:before {
         animation: arrowBefore .7s ease .5s;
         animation-fill-mode: forwards;
@@ -91,6 +92,7 @@ $menu_hover_color: rgba(204, 208, 212, 0.8);
       }          
     }
     .magic-button.unarrow {
+      height: unset !important;
       animation: unMakeArrow 1s ease-in-out .4s;
       animation-fill-mode: both;
       &:before {

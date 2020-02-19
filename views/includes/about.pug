@@ -1,1 +1,16 @@
 div#about.section
+  h1 About
+  div.about-inner.inner
+    - const paragraphs = about.paragraphs
+    div.description
+      each para in paragraphs
+        p= para
+
+    - const skills = about.skills
+    div.skills
+      each list, type in skills
+        div.skill
+          h3= type
+          ul
+            each item in list
+              li= item

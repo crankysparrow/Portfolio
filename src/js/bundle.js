@@ -3,6 +3,9 @@ import $ from 'jquery';
 console.log('bundle js loaded');
 
 $(function() {
+
+  $('.magic-button').css({height: '100%'});
+
   function menuClose() {
     $('ul.menu-list li').animate({
       maxHeight: '0px'

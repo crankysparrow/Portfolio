@@ -17,9 +17,9 @@ app.use(express.static(__dirname + '/dist'));
 app.get('/', (req, res) => {
   res.render('index', {
     title: information.intro.title,
-    intro: information.intro.text,
     paragraphs: information.paragraphs,
-    projects: information.projects
+    projects: information.projects,
+    about: information.about
   })
 })
 

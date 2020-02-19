@@ -4,20 +4,37 @@ $color_link: #ec9b3b;
 $color_header: #f7be16;
 // $color_bg_page:#00818a;
 $color_bg_page: #011627;
-$color_bg_section: #293462;
+$color_bg_section: #273540;
 
 @import 'typography.scss';
 @import 'header.scss';
+@import 'about.scss';
+@import 'projects.scss';
 
 body {
   font-family: "Roboto";
+  font-size: 1rem;
+  // line-height: 1.4rem;
   background: $color_bg_page;
+  p {
+    line-height: 1.4rem;
+  }
 }
 
 .section {
-  height: 100vh;
-  background: $color_bg_section;
-  margin: 0 6rem;
+  min-height: 100vh;
+  margin: 0rem 6rem;
+  &:not(.header) {
+    margin: 3rem 6rem;
+    padding-top: 6rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column;  
+    .inner {
+      background: $color_bg_section;
+      flex-grow: 1;
+    }  
+  }
 }
 
 .header {
@@ -35,29 +52,4 @@ body {
 // linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
   background-size: 30px 30px;
   background-repeat: repeat;
-}
-
-.projects {
-  margin: 0 10%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  .project-single {
-    display: flex;
-		flex-direction: column;
-    margin: 3rem 0;
-    flex: 0 0 20%;
-    box-shadow: -2px 2px 9px 0px rgba(0,0,0,0.34);
-    img {
-      width: 100%;
-      height: auto;
-    }
-		.image {
-			max-width: 100%;
-			img {
-				max-width: 100%;
-				height: auto;
-			}
-    }
-  }
 }

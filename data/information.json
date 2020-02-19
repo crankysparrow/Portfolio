@@ -9,6 +9,26 @@
     "3": "Maecenas egestas arcu quis ligula mattis placerat. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Fusce vel dui. Curabitur blandit mollis lacus.",
     "4": "Integer tincidunt. Praesent ut ligula non mi varius sagittis. Curabitur a felis in nunc fringilla tristique. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Suspendisse non nisl sit amet velit hendrerit rutrum."
   },
+  "about": {
+    "paragraphs": {
+      "1": "I'm a web developer in Philadelphia, PA. I'm excited about building responsive and flexible websites, learning new technologies, and untangling problems.",
+      "2": "Before learning web development, I taught music for over 10 years. As a teacher, I'm passionate about communicating clearly - this translates into building websites that are user-friendly and inituitive to use."
+    },
+    "skills": {
+      "Languages": [
+          "HTML5/CSS", "JavaScript", "PHP"
+      ],
+      "Frameworks & Libraries": [
+        "ReactJS", "Bootstrap", "NodeJS", "Sass/SCSS", "ExpressJS", "jQuery"
+      ],
+      "Tools": [
+        "Wordpress", "npm", "git/github", "Gulp", "Bash/command line"
+      ],
+      "Other Skills": [
+        "Photoshop", "Writing and copy-editing", "Social media"
+      ]
+    }
+  },
   "projects": {
     "1": {
       "title": "Terminal ASCII Art App",

@@ -1,0 +1,38 @@
+.projects {
+  margin: 0 10%;
+  .inner {
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // align-content: start;
+    // justify-content: center;
+  }
+  .project-single {
+    display: inline-flex;
+		flex-direction: column;
+    height: 200px;
+    padding: 0 1rem 1rem 1rem;
+    background-color: #41484D;
+    margin: 2%;
+    width: 21%;
+    float: left;
+    border: 1px solid #E2711D;
+    border-top-width: 5px;    
+    h3 {
+      border-bottom: 2px solid $color_header;
+      padding-bottom: 1rem;
+      margin-bottom: 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+		.image {
+			max-width: 100%;
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+    }
+  }
+}
