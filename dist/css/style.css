@@ -510,11 +510,9 @@ h1, h2, h3, h4, h5 {
       flex-direction: row;
       flex-wrap: wrap; }
   .projects .project-single {
-    width: calc((100% / 4 ) - 30px);
     margin: 15px;
     float: left;
     position: relative;
-    z-index: 22;
     transition: all 2s ease-out; }
     .projects .project-single .project-inner {
       cursor: pointer;
@@ -525,6 +523,19 @@ h1, h2, h3, h4, h5 {
       height: 32vh;
       width: 100%;
       transition: all .2s ease-out; }
+      .projects .project-single .project-inner h2.project-title {
+        transition: all .2s ease-in-out; }
+      .projects .project-single .project-inner h2 {
+        z-index: 100; }
+      .projects .project-single .project-inner .image {
+        position: absolute;
+        width: 100%;
+        height: 100%; }
+        .projects .project-single .project-inner .image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 0; }
       .projects .project-single .project-inner:after {
         transition: all .2s ease-in-out; }
       .projects .project-single .project-inner:before {
@@ -532,11 +543,30 @@ h1, h2, h3, h4, h5 {
     .projects .project-single .project-expander {
       transition: all .2s ease-out;
       background-color: #41484D;
-      width: 100%;
       position: relative;
       display: flex;
-      justify-content: center;
-      align-items: center; }
+      flex-direction: column;
+      overflow: hidden;
+      width: 100%; }
+      .projects .project-single .project-expander h3.project-title {
+        border-bottom: 2px solid #f7be16;
+        margin: .5rem 0 0 0;
+        padding: 0 1rem .5rem 1rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem; }
+      .projects .project-single .project-expander .tech {
+        margin: 1rem;
+        padding: 1rem;
+        border: 1px solid #f7be16; }
+        .projects .project-single .project-expander .tech h4, .projects .project-single .project-expander .tech p {
+          margin: 0 0 .5rem 0; }
+      .projects .project-single .project-expander .info {
+        margin: 0 1rem; }
+      .projects .project-single .project-expander .image {
+        width: 100%; }
+        .projects .project-single .project-expander .image img {
+          width: 100%;
+          height: auto; }
     .projects .project-single.is-collapsed .project-inner:before {
       content: '';
       opacity: 1;
@@ -544,7 +574,10 @@ h1, h2, h3, h4, h5 {
       position: absolute;
       height: 0;
       width: 100%;
-      background-color: #E2711D; }
+      height: 100%;
+      background-color: #E2711D;
+      z-index: 50;
+      opacity: .3; }
     .projects .project-single.is-collapsed .project-inner:after {
       content: '';
       opacity: 0; }
@@ -554,6 +587,8 @@ h1, h2, h3, h4, h5 {
       overflow: hidden;
       margin-top: 0;
       opacity: 0; }
+    .projects .project-single.is-expanded .project-inner h2.project-title {
+      opacity: 0; }
     .projects .project-single.is-expanded .project-inner:before {
       content: '';
       opacity: 1;
@@ -561,7 +596,8 @@ h1, h2, h3, h4, h5 {
       position: absolute;
       height: 100%;
       width: 100%;
-      background-color: #E2711D; }
+      background-color: #E2711D;
+      opacity: 0; }
     .projects .project-single.is-expanded .project-inner:after {
       content: '';
       opacity: 1;
@@ -579,8 +615,7 @@ h1, h2, h3, h4, h5 {
       min-height: 200px;
       overflow: visible;
       margin-top: 30px;
-      opacity: 1;
-      width: calc(400%  + 90px); }
+      opacity: 1; }
     .projects .project-single h2 {
       border-bottom: 2px solid #f7be16;
       position: absolute;
@@ -588,12 +623,57 @@ h1, h2, h3, h4, h5 {
       width: calc(100% - 30px);
       left: 15px;
       top: 0; }
-  .projects .project-single:nth-of-type(4n + 4) .project-expander {
-    margin-left: calc((-300% - 90px)); }
-  .projects .project-single:nth-of-type(4n + 3) .project-expander {
-    margin-left: calc((-200% - 60px)); }
-  .projects .project-single:nth-of-type(4n + 2) .project-expander {
-    margin-left: calc((-100% - 30px)); }
+
+.projects .project-single {
+  width: 100%; }
+
+@media (min-width: 576px) {
+  .projects .project-single {
+    width: calc((100% / 2) - 30px); }
+    .projects .project-single .project-expander {
+      width: calc(200% + 30px); }
+    .projects .project-single.is-expanded .project-expander {
+      width: calc(200% + 30px); }
+    .projects .project-single:nth-of-type(2n + 2) .project-expander {
+      margin-left: calc(-100% - 30px); } }
+
+@media (min-width: 768px) {
+  .projects .project-single {
+    width: calc((100% / 3) - 30px); }
+    .projects .project-single .project-expander {
+      width: calc(300% + 60px); }
+    .projects .project-single.is-expanded .project-expander {
+      width: calc(300% + 60px); }
+    .projects .project-single:nth-of-type(3n+3) .project-expander {
+      margin-left: calc((-200% - 60px)); }
+    .projects .project-single:nth-of-type(3n + 2) .project-expander {
+      margin-left: calc((-100% - 30px)); } }
+
+@media (min-width: 1200px) {
+  .projects .project-single {
+    width: calc((100% / 4 ) - 30px); }
+    .projects .project-single .project-expander {
+      align-items: stretch;
+      width: calc(400% + 90px); }
+      .projects .project-single .project-expander .image {
+        flex: 0 0 30%; }
+        .projects .project-single .project-expander .image img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover; }
+      .projects .project-single .project-expander .tech {
+        flex: 0 0 20%;
+        border: 1px solid #f7be16;
+        margin: 1rem;
+        padding: 1rem; }
+    .projects .project-single.is-expanded .project-expander {
+      width: calc(400%  + 90px); }
+    .projects .project-single:nth-of-type(4n + 4) .project-expander {
+      margin-left: calc((-300% - 90px)); }
+    .projects .project-single:nth-of-type(4n + 3) .project-expander {
+      margin-left: calc((-200% - 60px)); }
+    .projects .project-single:nth-of-type(4n + 2) .project-expander {
+      margin-left: calc((-100% - 30px)); } }
 
 body {
   font-family: "Roboto";

@@ -40,12 +40,14 @@
     "2": {
       "title": "Muhlenhaupt + Company Agency Website",
       "tech": "PHP/Wordpress, HTML/CSS, JavaScript, jQuery, Sass/SCSS",
-      "description": "Fully responsive website built on Wordpress CMS. Includes customizable template parts and a modular content system using Advanced Custom Fields."
+      "description": "Fully responsive website built on Wordpress CMS. Includes customizable template parts and a modular content system using Advanced Custom Fields.",
+      "image": "/images/MCo-original.png"
     }, 
     "3": {
       "title": "Note-Taking App",
       "tech": "ReactJS, HTML/CSS, Bootstrap",
-      "description": "Web application for creating notes and saving them in a user's local storage."
+      "description": "Web application for creating notes and saving them in a user's local storage.",
+      "image": "/images/notes.png"
     }
   }
 }

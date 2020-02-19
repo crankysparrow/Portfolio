@@ -6,6 +6,7 @@ $color_header: #f7be16;
 $color_bg_page: #011627;
 $color_bg_section: #273540;
 
+@import 'breakpoints.scss';
 @import 'typography.scss';
 @import 'header.scss';
 @import 'about.scss';

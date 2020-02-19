@@ -5,6 +5,7 @@ import nodemon from 'gulp-nodemon';
 import browserSync from 'browser-sync';
 import imagemin from 'gulp-imagemin';
 import webpack from 'webpack-stream';
+import cache from 'gulp-cache';
 
 const server = browserSync.create();
 
@@ -34,7 +35,7 @@ const clean = () => {
 
 const images = (cb) => {
   gulp.src('./images/*')
-    .pipe(imagemin())
+    .pipe(cache(imagemin({optimizationLevel: 3})))
     .pipe(gulp.dest('./dist/images'));
   cb();
 }
@@ -78,7 +79,8 @@ const app = (done) => {
 function watch(done) {
   gulp.watch('./src/sass/**/*.scss', styles);
   gulp.watch('./views/**/*.pug', reload);
-  gulp.watch('./src/js/**/*.js', gulp.series(scripts, reload))
+  gulp.watch('./src/js/**/*.js', gulp.series(scripts, reload));
+  gulp.watch('./images/**', gulp.series(images, reload));
   done();
 }
 
