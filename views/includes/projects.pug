@@ -1,20 +1,26 @@
 div#projects.section.projects
   h1 Projects
+  div #{description}
   div.inner
     div.list
       each project in projects 
         div.project-single.is-collapsed
           div.project-inner
-            h2.project-title #{project.title}
+            h1.project-title #{project.title}
             div.image 
               img(src=project.image)
           div.project-expander    
             h3.project-title #{project.title}  
             div.info 
-              p #{project.description}    
+              each p in project.description 
+                p !{p}
             div.tech
               h4 Technologies Used:
-              p #{project.tech}                                           
+              p #{project.tech}   
+            div.links
+              ul
+                each link, name in project.links
+                  li: a(href=link) #{name}                                        
           //- img(src=project.image)
       //- each project in projects 
       //-   div.project-single

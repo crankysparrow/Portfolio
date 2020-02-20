@@ -31,23 +31,51 @@
   },
   "projects": {
     "1": {
-      "title": "Terminal ASCII Art App",
+      "title": "Terminal ASCII Art",
       "tech": "NodeJS",
-      "description": "Turns any graphic into ASCII artaa which is displayed in the terminal.",
-      "image": "/images/ascii.png"
+      "description": [
+        "This app turns a graphic into ASCII art and displays it in the user's terminal."
+      ],
+      "image": "/images/asciicat.png",
+      "links": {
+        "Git Repo": "https://github.com/crankysparrow/console-ASCII-art"
+      }
 
     },
     "2": {
       "title": "Muhlenhaupt + Company Agency Website",
       "tech": "PHP/Wordpress, HTML/CSS, JavaScript, jQuery, Sass/SCSS",
-      "description": "Fully responsive website built on Wordpress CMS. Includes customizable template parts and a modular content system using Advanced Custom Fields.",
-      "image": "/images/MCo-original.png"
+      "description": [
+        "Built a custom theme for Wordpress for this creative agency in Manayunk, Philadelphia. I used Advanced Custom Fields to create modules that can be customized and rearranged across several different website templates."
+      ],
+      "image": "/images/MCo-bars.png",
+      "links": {
+        "More Screenshots": "https://www.behance.net/gallery/86935413/Muhlenhaupt-Company-website"
+      }
     }, 
     "3": {
-      "title": "Note-Taking App",
+      "title": "Take Notes",
       "tech": "ReactJS, HTML/CSS, Bootstrap",
-      "description": "Web application for creating notes and saving them in a user's local storage.",
-      "image": "/images/notes.png"
+      "description": [
+        "A web app that allows a user to take and save notes. Notes are saved in the browser's local storage so a user can close the window and come back to it later; their notes will be there so long as they have not cleared their browser cache."
+      ],
+      "image": "/images/notes.png",
+      "links": {
+        "Github": "https://github.com/crankysparrow/take-notes",
+        "Live App": "https://crankysparrow.github.io/take-notes/"
+      }
+    },
+    "4": {
+      "title": "Tarot Draw",
+      "tech": "ReactJS, MaterialUI",
+      "description": [
+        "I needed to practice making API calls in ReactJS and also wanted to experiment a bit with <a href='https://material-ui.com/'>MaterialUI<\/a>. Combined this experiment with my love for tarot and general witchiness, and built an app to draw a random tarot card and display a bit of information about its meaning.",
+        "I used an API built by user <a href='https://github.com/ekelen/tarot-api'>ekelen on github<\/a>, modified slightly so the server could serve up this app at the same time."
+      ],
+      "image": "/images/tarot.png",
+      "links": {
+
+      }
     }
   }
 }
