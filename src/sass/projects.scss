@@ -1,5 +1,8 @@
 .projects {
   margin: 0 10vw;
+  p.more {
+    margin-top: 0;
+  }
   .inner {
     position: relative;
     display: flex;
@@ -22,6 +25,7 @@
     position: relative; 
     .project-inner {
       h1.project-title {
+        font-size: 1.8rem;
         transition: all .2s ease-in-out;
         z-index: 100;
         border-bottom: 2px solid $color_header;
@@ -188,11 +192,28 @@
 
 .projects .project-single {
   width: 100%;
+  .project-inner  {
+    h1.project-title {
+      font-size: 1.8rem;
+    }
+    height: calc(88vw - 30px);
+  }
+}
+
+@include breakpoint-up(xs) {
+  .projects .project-single {
+    .project-inner {
+      height: calc(50vw);
+    }
+  }
 }
 
 @include breakpoint-up(sm) {
   .projects .project-single {
     width: calc((100% / 2) - 30px);
+    .project-inner  {
+      height: calc((88vw/2) - 30px);
+    }
     .project-expander {
       width: calc(200% + 30px);
       .tech {
@@ -213,9 +234,26 @@
   }
 }
 
+@include breakpoint-up(md) {
+  .projects .project-single {
+    .project-inner {
+      h1.project-title {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
 @include breakpoint-up(lg) {
+  .projects .list {
+    max-width: 1200px;
+  }
   .projects .project-single  {
     width: calc((100% / 3) - 30px);
+    .project-inner {
+      height: calc((88vw / 3) - 30px);
+      max-height: ((1200px / 3 - 30px));
+    }
     .project-expander {
       .project-title {
         flex: 0 0 100%;
@@ -268,46 +306,46 @@
   }
 }
 
-@include breakpoint-up(xl) {
-  .projects {
-    max-width: 1200px;
-  }
-  .projects .project-single {
-    .project-inner {
-      height: calc((88vw / 4) - 60px); 
-    }
-    .project-expander {
-      align-items: stretch;
-      .tech {
-        border: 1px solid $color_header;
-      }
-      width: calc(400% + 90px);
-    }
-    width: calc((100% / 4 ) - 30px);
-    &.is-expanded {
-      .project-expander {
-        width: calc(400%  + 90px);
-      }
-    }
-    &:nth-of-type(4n + 1)  {
-      .project-expander {
-        margin-left: 0;
-      }
-    }     
-    &:nth-of-type(4n + 4) {
-      .project-expander {
-        margin-left: calc((-300% - 90px));
-      }
-    }
-    &:nth-of-type(4n + 3) {
-      .project-expander {
-        margin-left: calc((-200% - 60px));
-      }
-    }
-    &:nth-of-type(4n + 2)  {
-      .project-expander {
-        margin-left: calc((-100% - 30px));
-      }
-    }  
-  }
-}
+// @include breakpoint-up(xl) {
+//   .projects {
+//     max-width: 1200px;
+//   }
+//   .projects .project-single {
+//     .project-inner {
+//       height: calc((1200px / 4) - 60px); 
+//     }
+//     .project-expander {
+//       align-items: stretch;
+//       .tech {
+//         border: 1px solid $color_header;
+//       }
+//       width: calc(400% + 90px);
+//     }
+//     width: calc((100% / 4 ) - 30px);
+//     &.is-expanded {
+//       .project-expander {
+//         width: calc(400%  + 90px);
+//       }
+//     }
+//     &:nth-of-type(4n + 1)  {
+//       .project-expander {
+//         margin-left: 0;
+//       }
+//     }     
+//     &:nth-of-type(4n + 4) {
+//       .project-expander {
+//         margin-left: calc((-300% - 90px));
+//       }
+//     }
+//     &:nth-of-type(4n + 3) {
+//       .project-expander {
+//         margin-left: calc((-200% - 60px));
+//       }
+//     }
+//     &:nth-of-type(4n + 2)  {
+//       .project-expander {
+//         margin-left: calc((-100% - 30px));
+//       }
+//     }  
+//   }
+// }

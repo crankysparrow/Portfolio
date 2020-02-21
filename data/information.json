@@ -36,7 +36,7 @@
       "description": [
         "This app turns a graphic into ASCII art and displays it in the user's terminal."
       ],
-      "image": "/images/asciicat.png",
+      "image": "/images/asciibun.png",
       "links": {
         "Git Repo": "https://github.com/crankysparrow/console-ASCII-art"
       }
@@ -74,7 +74,8 @@
       ],
       "image": "/images/tarot.png",
       "links": {
-
+        "Git Repo": "https://github.com/crankysparrow/tarot-draw", 
+        "Live App": "https://sp-tarot-app.herokuapp.com/"
       }
     },
     "5": {
@@ -86,6 +87,17 @@
       "image": "/images/oz-app.png",
       "links":  {
         "View Website": "https://oz.app/"
+      }
+    },
+    "6": {
+      "title": "Portfolio Website",
+      "tech": "Pug, Sass/SCSS, NodeJS, Gulp, jQuery, ExpressJS",
+      "description": [
+        "This website! The page templates are built with pug and Sass, and an ExpressJS server pulls the content from a JSON file."
+      ],
+      "image": "/images/portfolio-site.png",
+      "links": {
+        "Git Repo": ""
       }
     }
   }
