@@ -36,7 +36,7 @@
       background-color: #41484D;
       border: 1px solid #E2711D;
       border-top-width: 5px;  
-      height: 32vh;  
+      // height: calc((88vw / 4) - 60px); 
       width: 100%;
       transition: all .2s ease-out; 
       .image {
@@ -269,29 +269,17 @@
 }
 
 @include breakpoint-up(xl) {
+  .projects {
+    max-width: 1200px;
+  }
   .projects .project-single {
+    .project-inner {
+      height: calc((88vw / 4) - 60px); 
+    }
     .project-expander {
       align-items: stretch;
-      .image {
-        // align-self: stretch;
-        flex: 0 0 30%;
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-        }
-      }
-      .links {
-        flex: 0 0 20%;
-      }
-      .info {
-        flex: 0 0 40%;
-      }
       .tech {
-        // flex: 0 0 30%;
         border: 1px solid $color_header;
-        margin: 1rem;
-        padding: 1rem;
       }
       width: calc(400% + 90px);
     }
@@ -301,6 +289,11 @@
         width: calc(400%  + 90px);
       }
     }
+    &:nth-of-type(4n + 1)  {
+      .project-expander {
+        margin-left: 0;
+      }
+    }     
     &:nth-of-type(4n + 4) {
       .project-expander {
         margin-left: calc((-300% - 90px));

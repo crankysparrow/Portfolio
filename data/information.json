@@ -76,6 +76,17 @@
       "links": {
 
       }
+    },
+    "5": {
+      "title": "Oz App",
+      "tech": "HTML/CSS, PHP, Wordpress, JavaScript, jQuery, Gulp, Sass/SCSS",
+      "description": [
+        "Custom Wordpress theme and website for an entertainment management software. The site is fully responsive with a carousel testimonials slider and several custom pages. The content is all customizable through Advanced Custom Fields."
+      ],
+      "image": "/images/oz-app.png",
+      "links":  {
+        "View Website": "https://oz.app/"
+      }
     }
   }
 }

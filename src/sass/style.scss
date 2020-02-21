@@ -24,9 +24,11 @@ body {
 
 .section {
   min-height: 100vh;
-  margin: 0rem 6vw;
+  margin: 0 auto;
+  max-width: 1200px;
   &:not(.header) {
-    margin: 3rem 6vw;
+    width: 88vw;    
+    margin: 3rem auto;
     padding-top: 6rem;
     text-align: right;
     display: flex;
@@ -35,6 +37,7 @@ body {
       background: $color_bg_section;
       flex-grow: 1;
     }  
+
   }
 }
 

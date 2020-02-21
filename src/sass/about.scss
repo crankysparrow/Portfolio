@@ -7,26 +7,28 @@
   .about-inner {
     background: #273540;
     flex-grow: 1;
-    width: 100%;
+    // width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;    
   }
   .description {
-    width: 50%;
-    margin: 2rem 5rem;
+    width: 100%;
+    padding: 1rem;
     line-height: 1.4rem;
   }
   .skills {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
     justify-content: center;
+    // align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
     .skill {
+      // flex: 0 0 40%;
       background: #273540;
-      flex: 0 0 20%;
-      margin: 0 1rem;
+      margin: 1rem 2rem;
       border: 1px solid #E2711D;
       border-top-width: 5px;
       padding: 0 1rem 1rem 1rem;
@@ -42,7 +44,38 @@
       text-align: left;
       li {
         font-size: 1rem;
-        line-height: 1.5rem;
+        line-height: 1.1rem;
+        padding-bottom: .5rem;
+      }
+    }
+  }
+}
+
+@include breakpoint-up(sm) {
+  #about {
+    .skills  {
+      flex-direction: row;
+      justify-content: space-evenly;
+      .skill {
+        flex: 0 0 45%;
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+
+@include breakpoint-up(lg) {
+  #about {
+    .description {
+      width: 50%;
+      margin: 2rem 5rem;
+    }
+    .skills {
+      justify-content: center;
+      align-items: start;
+      .skill {
+        flex: 0 0 20%;
+        margin: 1rem;
       }
     }
   }
