@@ -48,7 +48,7 @@
       "description": [
         "Built a custom theme for Wordpress for this creative agency in Manayunk, Philadelphia. I used Advanced Custom Fields to create modules that can be customized and rearranged across several different website templates."
       ],
-      "image": "/images/MCo-bars.png",
+      "image": "/images/mCo-bars.png",
       "links": {
         "More Screenshots": "https://www.behance.net/gallery/86935413/Muhlenhaupt-Company-website"
       }
@@ -97,7 +97,7 @@
       ],
       "image": "/images/portfolio-site.png",
       "links": {
-        "Git Repo": ""
+        "Git Repo": "https://github.com/crankysparrow/portfolio"
       }
     }
   }
