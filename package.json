@@ -24,6 +24,6 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.0.2",
     "nodemon": "^2.0.2",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^7.0.0"
   }
 }
